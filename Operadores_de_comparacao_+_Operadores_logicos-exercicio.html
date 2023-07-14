@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <titlle> Lógica de Programação </titlle>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1> Operadores de comparação + Operadores Lógicos </h1>
+        
+        
+        <script>
+        
+                var player1 = prompt('numero do 1º player');
+            player1 = parseInt(player1);
+                
+                var player2 = prompt('numero do 2º player');
+            player2 = parseInt(player2);
+            
+            
+            if(player1 === player2){
+                alert('Empate!');
+            } else {
+                
+                var nSorteado = parseInt(Math.random() * 2);                 
+                alert('Número Sorteado: ' + nSorteado);
+                    
+                    if( (nSorteado === 0 && player1 < player2) || 
+                    (nSorteado === 1 && player1 > player2) ){
+                        alert('Player 1 Win!! ' + player1)
+                    } else {
+                        alert('Player 2 Win!! ' + player2);
+                    }
+                
+                }
+                    
+            
+            
+        </script>
+    
+    </body>
+    
+</html>
+ 
+
+    
+    

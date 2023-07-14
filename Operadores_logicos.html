@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <titlle> lógica de Programação   </titlle>
+    </head>
+    <body>
+        <h1> Operadores Lógicos </h1>
+        
+        <script>
+            
+        /*
+        Operadores Lógicos
+        
+        ! = Não(not)
+        && E(and)
+        || ou(or)
+        
+        */
+            
+        var nota1 = prompt('Digite a 1ª nota: ');
+            nota1 = parseInt(nota1);
+        
+            
+        var nota2 = prompt('Digite a 2ª nota: ');
+            nota2 = parseInt(nota2);
+            
+        var media = (nota1 + nota2) / 2;
+        
+       
+            if( nota1 > 0 && nota2 > 0 && media  > 5 ){
+                alert('Parabés!! Você foi aprovado!! Média: ' + media);
+                
+            }else{
+                alert("Reprovado!! Média: " + media); 
+        
+            }
+                
+        
+        </script>
+    </body>
+</html>

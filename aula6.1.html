@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <titlle> sexta aula carai </titlle>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1> Cuidja Cuidja </h1>
+        
+        <h2> Operadores de comparação</h2>
+        
+        <script>
+        
+             /*
+
+    ==  Igualdade(valor)
+    !=  Diferente(valor)
+    === Igualdade (valor e tipo)
+    !== Diferente(valor e tipo)
+    >   maior 
+    >=  maior ou igual
+    <   menor
+    <=  menor ou igual
+
+    Obs: O operador = não é operador de comparação, e sim de atribuição!
+    Em Algumas Linguagens de prog, o <> é o operador de "diferente"
+    
+    */
+         
+                //fazer o player 1 digitar um numero
+                var player1 = prompt('numero do 1º player');
+            player1 = parseint(player1);
+                
+                //fazer o player 2 digitar outro numero
+                var player2 = prompt('numero do 2º player');
+            player2 = parseint(player2);
+            
+            
+            if(player1 === player2){
+                alert('Draw!');
+                
+            } else {
+                
+                var nSorteado = parseInt(Math.random() * 2);
+                
+            if(nSorteado ===0){
+                
+                if(player1 < player2){
+                    alert('Player 1 Win!');
+                } else {
+                    alert('Player 2 Win!');                
+                }
+           
+            }else{
+                if(player1 > player2){
+                    alert('Player 1 Win!');
+                } else {
+                    alert('Player 2 Win!');
+                }
+                
+            }
+                
+                
+        }
+               
+        </script>
+    
+    </body>
+    
+</html>
+ 
+
+    
+    
