@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <titlle> Lógica de Programação   </titlle>
+    </head>
+    <body>
+        <h1> Funções - 3</h1>
+        
+        <button onclick="mostrarAreaAlert()">mostrar área num alert</button>
+
+        <button onclick="mostrarAreaOutput()">mostrar área no output</button>
+
+        <div id="output"></div>
+
+        <script>
+           /*
+           PROBLEMA: 
+           Pedir para o usuário digitar dois números
+           que representam os lados de um retângulo.Mostrar
+           na tela a área total de duas formas distintas:Num alert 
+           ou na div#output(dependendo do botão clicado).
+           Esse código não precisa ser executado quando a 
+           página é aberta.
+           */ 
+            
+            
+
+            function mostrarAreaAlert(){
+        
+            var largura = prompt('Digite a largura: ');
+                largura = parseFloat(largura);
+        
+            var altura = prompt('Digite a altura: ');
+                altura = parseFloat(altura);
+                
+                var area = calcularArea(largura, altura);
+
+                alert('A área total é: ' + area );
+            }
+
+            function mostrarAreaOutput(){
+            
+            var largura = prompt('Digite a largura: ');
+                largura = parseFloat(largura);
+        
+            var altura = prompt('Digite a altura: ');
+                altura = parseFloat(altura);
+                
+                
+                var area = calcularArea(largura , altura);
+
+                document.querySelector('#output').innerHTML = 'A área total é: ' + area; 
+            }
+
+            function calcularArea(l, a){
+                return l * a;
+                
+            }
+        
+        /*
+        Funções que recebem valores (mais conhecidos como 
+        argumentos ou parâmetros) são úteis para reaproveitar
+        ainda mais seus códigos.
+        */
+        
+        
+        </script>
+    </body>
+</html>

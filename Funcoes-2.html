@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <titlle> lógica de Programação   </titlle>
+    </head>
+    <body>
+        <h1> Funções - 3</h1>
+        
+        <button onclick="mostrarArea(largura, altura)">mostrar área</button>
+
+        <script>
+            
+            /*
+            Pedir para o usuário digitar dois números
+            que representam os lados de  um retângulo assim que a pagina é carregada. 
+            Mostrar na tela a área total quando clicar num botão.
+            */
+            
+            var largura = prompt('Digite a largura: ');
+                largura = parseFloat(largura);
+        
+            var altura = prompt('Digite a altura: ');
+                altura = parseFloat(altura);
+
+            function mostrarArea(l, a){
+                //alert('recebendo parametro L : ' + l);
+                //alert('recebendo parametro A : ' + a);
+                alert('area total: ' + (l * a ));
+            
+            }
+        
+        /*
+        Funções que recebem valores (mais conhecidos como 
+        argumentos ou parâmetros) são úteis para reaproveitar
+        ainda mais seus códigos.
+        */
+        
+        
+        </script>
+    </body>
+</html>

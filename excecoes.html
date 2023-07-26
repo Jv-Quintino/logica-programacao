@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <titlle> Lógica de Programação   </titlle>
+    </head>
+    <body>
+        <h1> Funções - Exceções </h1>
+        
+        <button onclick="iniciarCalculo('+')">+</button>
+        <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculo('*')">*</button>
+        <button onclick="iniciarCalculo('/')">/</button>
+
+        <div id="output"></div>
+        
+        <script>
+       
+       /*
+       Funções que retornam valores 
+       são úteis para que o desenvolvedor 
+       tenha autonomia para decidir o que 
+       deseja fazer com o valor retornado
+       */
+       
+       
+            var n2 = prompt('Digite um número: ');
+            n2 = parseFloat(n2);
+        
+            escreve(n2);
+
+            function iniciarCalculo(simbolo){
+                var n1 = document.querySelector('#output').textContent;
+                n1 = parseFloat(n1);
+                var n2 = prompt('Digite outro Número: ');
+                parseFloat(n2);
+
+                try {
+                    var msg = calcular(simbolo , n1, n2);
+                } catch (e){
+                    console.log(e)
+                    //ou alert(e);
+                }
+
+                /*
+                TRY ... CATCH(ERRO)
+
+                Tratam da exceção.
+                Não deveria ter ocorrido, mas ocorreu.
+                Nunca subestime a capacidade do usuário!
+                */
+
+                escreve(msg);
+
+            }
+
+            function escreve(mensagem){
+                var output = 
+                document.querySelector('#output');
+                output.innerHTML = mensagem;
+                
+            }
+
+            function calcular(simbolo, n1, n2){
+
+                if(simbolo !== '+' && simbolo !== '-' && simbolo 
+                !== '*' && simbolo !== '/'){
+                    throw new Error('Digite um simbolo válido! ')
+                    
+                }
+
+                if( isNaN(n1) || isNaN(n2) ){
+                    throw new Error('chama passando somente números! ')
+                    
+                }
+                
+                var numeroCalculado = null;
+
+                switch(simbolo){
+                    case '+':
+                    numeroCalculado = n1 = parseFloat(n1) + parseFloat(n2);
+                        break;
+                    case '-':
+                        numeroCalculado = n1 - n2;
+                        break;
+                    case '*':
+                        numeroCalculado = n1 * n2;
+                        break;
+                    case '/':
+                        numeroCalculado = n1 / n2;               
+                }
+            
+                return numeroCalculado
+
+            }
+
+            
+        
+        
+        
+        </script>
+    </body>
+</html>

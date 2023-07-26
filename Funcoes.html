@@ -6,6 +6,9 @@
     <body>
         <h1> Funções </h1>
         
+        <button onclick="MostrarTabuada()">Criar Tabuada</button>
+        <button onclick="LimparTabuada()">Limpar Tabuada</button>
+       
         <div id="output"></div>
 
         <script>
@@ -17,14 +20,48 @@
         número e também de limpar a tabuada gerada previamente.
         */
             
+        function MostrarTabuada(){
+        //perguntar o número para o usuário
+        var n = prompt('Digite um Número: ');
+        //chamar função limpar tabuada
+        LimparTabuada();
+        //converter o número
+            n = parseFloat(n);
+        //criar uma variavel que servirá de indice
+        var i = 1;
+        /*enquanto indice for <= 1000
+        concatena na variavel mensagem*/
+        while(i <= 1000){
+            mensagem += n + ' x ' +  i + ' = ' + (n*i) + '<br>';
+            i++;
+        }       
+         //mostra mensaggem no output
+         output.innerHTML = mensagem;
+    
+        
+    }
+
+        function LimparTabuada(){
+            mensagem = '';
+            output.innerHTML = mensagem;
+            
+        }
+
+
         var output = document.querySelector('#output');
 
-        console.log(output);
-
-        output.innerHTML = "Texto inserido por javascript"
+        var mensagem = '';
 
 
-        
+
+
+        /*
+        Obs: Funções void
+        Funções que não retornam nenhum valor.São 
+        úteis quando queremos reaproveitar código.
+        */
+
+
         </script>
     </body>
 </html>
