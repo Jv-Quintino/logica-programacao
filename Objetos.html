@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <titlle> Lógica de Programação   </titlle>
+    </head>
+    <body>
+        <h1> Conjunto de dados - Objetos </h1>
+        
+        <div id="output"></div>
+
+        <script>
+            /*
+            Mostrar na tela todos os dados de um 
+            produto específico, contendo quantidade
+            em estoque e preço. Estes dados estarão
+            agrupados em um objeto.
+            */
+        
+            var produto1 = new Object();
+           //Propriedades do objeto 
+            produto1.nome = "Caneta Bic";
+            produto1.cor = "Vermelho"
+            produto1.preco = 'R$' + 2.2;
+            produto1.estoque = 10;
+
+            produto1.comprar = function (qtd){
+                if(!qtd) {
+                    qtd = 1;
+                }
+                
+                console.log('Comprou caneta');
+               // this.estoque--;
+               this.estoque = this.estoque - qtd;
+               console.log(this.estoque);                
+            }
+
+            var msg = '';
+
+            msg += 'Nome: ' + produto1.nome + '<br>';
+            msg += 'Cor: ' + produto1.cor + '<br>';
+            msg += 'Preço: ' + produto1.preco + '<br>';
+            msg += 'Estoque: ' + produto1.estoque + '<br>';
+
+            document.querySelector('#output').innerHTML = msg;
+
+        </script>
+    </body>
+</html>
+
+

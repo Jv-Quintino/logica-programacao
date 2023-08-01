@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <titlle> Lógica de Programação   </titlle>
+    </head>
+    <body>
+        <h1> Conjunto de dados -  Arrays </h1>
+        
+        <div id="output"></div>
+
+        <script>
+            /*
+            ARRAYS : Conjunto de dados agrupados entre []
+
+            var pessoas = new Array()
+           
+            pessoas[0] = 'jose'
+
+            pessoas
+            ['jose']
+
+             pessoas[1] = 'maria
+             
+             pessoas
+             (2) ['jose', 'maria']
+
+
+             PROBLEMA:
+
+             Mostrar na tela todos os produtos
+             diponíveis para compra. Os nomes dos
+             produtos estão agrupados num array.
+
+            */
+
+
+            var produtos = new Array('Caneta', 'Lápis', 'Tesoura', 'Borracha',
+            'Caderno', 'Livro');
+
+            //Introduzindo strings no array
+            produtos.push('Compasso', 'Cartolina')
+
+            var output = document.querySelector('#output')
+
+            var msg = '';
+            for (var i = 0; i < produtos.length ; i++){
+                msg +='Produto '+ (i + 1) +  ' : '+ produtos[i] +'<br>';
+            }
+
+            output.innerHTML = msg;
+
+        
+        </script>
+    </body>
+</html>

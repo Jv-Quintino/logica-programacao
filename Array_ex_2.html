@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <titlle> Lógica de Programação   </titlle>
+    </head>
+    <body>
+        <h1> Exercício 2 - Arrays </h1>
+        
+        <script>
+            
+
+            var arr = new Array(25, 30, 45, 28, 0, 12, 78, 64);
+
+            /*mostrar na tela a soma dos numeros pares da 
+            array acima*/
+        
+            var soma = 0;
+
+            for (var i = 0; i < arr.length; i++){
+                console.log(i);
+                console.log(arr[i])
+           
+                if( !isNaN (arr[i]) && arr[i] % 2 === 0){
+                    soma += arr[i];
+
+                }
+           
+           
+            }
+
+            alert('A soma dos números pares é: ' + soma);
+
+        </script>
+    </body>
+</html>

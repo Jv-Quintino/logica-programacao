@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <titlle> Lógica de Programação   </titlle>
+    </head>
+    <body>
+        <h1> Grande Quantidade de dados - Array de objetos </h1>
+        
+        <div id="output"></div>        
+
+        <script>
+           /*
+           Problema:
+           Mostrar na tela os dados de produtos,
+           contendo quantidade em estoque e 
+           preço. Estes dados estarão agrupados em
+           um array de objetos.
+           
+            */ 
+            /*
+                ARRAY DE OBJETOS
+
+            Conjunto de dados({})
+            agrupados 
+            dentro de um array([])
+            
+            */
+           
+           var produtos = [
+                {"Nome": "Caneta", "Preço": 2}, 
+                {"Nome": "Lápis", "Preço": 1.2},
+                {"Nome": "Borracha", "Preço": 0.5}
+        ];
+
+        var msg = "";
+
+        for(var i = 0; i < produtos.length; i++){
+            console.log(produtos[i].preco);
+
+            msg += "<h2>Produto: "+ produtos[i].Nome +"</h2>";
+            msg += "<p>Preço: R$ "+ produtos[i].Preço +"</p>";
+        }
+
+        document.querySelector('#output').innerHTML = msg;
+
+        </script>
+    </body>
+</html>
+
+
